@@ -13,7 +13,6 @@ use remote_storage::{
     RemoteStorageConfig, RemoteStorageKind, StorageMetadata,
 };
 use std::collections::HashMap;
-#[path = "common/tests.rs"]
 use std::collections::HashSet;
 use std::fmt::{Debug, Display};
 use std::io::Cursor;
