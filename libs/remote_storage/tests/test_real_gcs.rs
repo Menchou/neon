@@ -95,6 +95,7 @@ async fn gcs_get_object_bytes_range_header(ctx: &mut EnabledGCS) -> anyhow::Resu
     let dl_object = download_to_vec(ctx.client.download(&path, &opts, &cancel).await?).await?;
     let s = String::from_utf8(dl_object).unwrap();
     assert_eq!(5, s.len());
+    assert_eq!("world", s);
     Ok(())
 }
 #[test_context(EnabledGCS)]
