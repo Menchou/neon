@@ -1,6 +1,3 @@
-#![allow(dead_code)]
-#![allow(unused)]
-
 mod common;
 
 use crate::common::{download_to_vec, upload_stream};
