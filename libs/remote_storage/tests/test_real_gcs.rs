@@ -107,7 +107,7 @@ async fn gcs_test_suite(ctx: &mut EnabledGCS) -> anyhow::Result<()> {
     // Our test depends on discrepancies in the clock between S3 and the environment the tests
     // run in. Therefore, wait a little bit before and after. The alternative would be
     // to take the time from S3 response headers.
-    const WAIT_TIME: Duration = Duration::from_millis(3_000);
+    const WAIT_TIME: Duration = Duration::from_millis(1_000);
 
     async fn retry<T, O, F, E>(op: O) -> Result<T, E>
     where
